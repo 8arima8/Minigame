@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Társasjáték</title>
+<style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f8f8f8; }
+    #board { display: flex; justify-content: center; margin-top: 20px; flex-wrap: wrap; width: 520px; margin-left: auto; margin-right: auto; }
+    .cell {
+        width: 50px; height: 50px;
+        background: lightgreen; border: 1px solid black;
+        display: flex; justify-content: center; align-items: center;
+        position: relative;
+    }
+    .player {
+        width: 30px; height: 30px;
+        background: blue; border-radius: 50%;
+        position: absolute;
+    }
+    #dice {
+        width: 80px; height: 80px;
+        background: lightgray; display: flex; justify-content: center; align-items: center;
+        font-size: 30px; margin: 20px auto; cursor: pointer; border-radius: 10px;
+    }
+    #card { margin-top: 20px; font-weight: bold; min-height: 30px; }
+</style>
+</head>
+<body>
+
+<h1>Mini Társasjáték</h1>
+
+<div id="dice">🎲</div>
+<div id="board"></div>
+<div id="card"></div>
+
+<script>
+    const boardSize = 10;
+    const board = document.getElementById('board');
+    const cardDiv = document.getElementById('card');
+    const dice = document.getElementById('dice');
+
+    const cards = [
+        "Lépj előre 2 mezőt!",
+        "Menj vissza 1 mezőt!",
+        "Kimaradsz e
